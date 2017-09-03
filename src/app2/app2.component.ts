@@ -1,5 +1,8 @@
 import {Component, NgZone, Inject} from '@angular/core';
 
+import {heightOfNavbar} from '../root-application/root-application.js';
+import {heightOfNavbarReact} from '../app1/app1.js';
+
 @Component({
 	selector: 'app2',
 	template: `
@@ -14,4 +17,15 @@ import {Component, NgZone, Inject} from '@angular/core';
 	`,
 })
 export class App2 {
+
+	constructor(){
+		heightOfNavbar.subscribe((height) => {
+			console.log('height from Parent', height);
+		});
+
+		heightOfNavbarReact.subscribe((height) => {
+			console.log('height from React', height);
+		})
+	}
+
 }

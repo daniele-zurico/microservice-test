@@ -37,6 +37,6 @@ enableProdMode();
 	],
 	bootstrap: [App2]
 })
-export default class MainModule implements OnDestroy {
+export default class MainModule {
 
 }
