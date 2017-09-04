@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import singleSpaReact from 'single-spa-react';
 import Root from './root.component.js';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/Rx';
 
 const reactLifecycles = singleSpaReact({
 	React,
@@ -35,5 +36,5 @@ function domElementGetter() {
 	return el;
 }
 
-export const heightOfNavbarReact = Observable.just(4);
+export const heightOfNavbarReact = Observable.of(4);
 
