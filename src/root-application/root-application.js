@@ -1,5 +1,5 @@
 import * as singleSpa from 'single-spa';
-import {Observable} from 'rx';
+import {Observable} from 'rxjs';
 singleSpa.declareChildApplication('app-1',
 	() => import('../app1/app1.js'), hashPrefix('/app1')
 );
